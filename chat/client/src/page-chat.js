@@ -1,4 +1,29 @@
 import {registerCallbacks, sendMessage, signout, chatMessageLoop} from './chat-api';
+import Vue from 'vue'
+import App from './App.vue'
+
+new Vue({
+	el: '#main-container',
+	components: { App },
+	template: '<App/>'
+})
+
+let id = 0;
+
+export let characterList = [
+
+]
+addcharacter(() =>{
+    characterList.push({ //a ajuster obv
+        id : ++id,
+        path: "img/monster3.png",
+        left : Math.random() * 100 + "vw",
+        top : Math.random() * 50 + "vh",
+        life : 100
+    })
+})
+
+
 
 window.addEventListener("load", () => {
     document.querySelector("textarea").onkeyup = function (evt) {
