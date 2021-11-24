@@ -11,8 +11,61 @@ new Vue({
 let id = 0;
 
 export let characterList = [
+    {   
+        name: "Roland",
+        path: "img/sprites/RolandSprite.png",
+        cardPath: "img/cards/rolandCard.png",
+    },
+    {   
+        name: "Malkuth",
+        path: "img/sprites/MalkuthSprite.png",
+        cardPath: "img/cards/malkuthCard.png",
+    },
+    {   
+        name: "Yesod",
+        path: "img/sprites/YesodSprite.png",
+        cardPath: "img/cards/yesodCard.png",
+    },
+    {   
+        name: "Netzach",
+        path: "img/sprites/NetzachSprite.png",
+        cardPath: "img/cards/netzachCard.png",
+    },
+    {   
+        name: "Hod",
+        path: "img/sprites/HodSprite.png",
+        cardPath: "img/cards/hodCard.png",
+    },
+    {   
+        name: "Tipereth",
+        path: "img/sprites/TiperethSprite.png",
+        cardPath: "img/cards/tiperethCard.png",
+    },
+    {   
+        name: "Gebura",
+        path: "img/sprites/GeburaSprite.png",
+        cardPath: "img/cards/geburaCard.png",
+    },
+    {   
+        name: "Chesed",
+        path: "img/sprites/ChesedSprite.png",
+        cardPath: "img/cards/chesedCard.png",
+    },
+    {   
+        name: "Binah",
+        path: "img/sprites/BinahSprite.png",
+        cardPath: "img/cards/binahCard.png",
+    },
+    {   
+        name: "Hokma",
+        path: "img/sprites/HokmaSprite.png",
+        cardPath: "img/cards/hokmaCard.png",
+    },
 
 ]
+
+
+
 addcharacter(() =>{
     characterList.push({ //a ajuster obv
         id : ++id,
