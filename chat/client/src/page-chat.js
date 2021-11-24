@@ -23,6 +23,59 @@ addcharacter(() =>{
     })
 })
 
+export let backgroundList = [
+
+    {
+        name: "Floor of History",
+        path: "img/backgrounds/floorHistory.png"
+    },
+    {
+        name: "Floor of Technological Sciences",
+        path: "img/backgrounds/floorTechonologicalSciences"
+    },
+    {
+        name: "Floor of General Work",
+        path: "img/backgrounds/floorGeneralWork"
+    },
+    {
+        name: "Floor of Art",
+        path: "img/backgrounds/floorArt"
+    },
+    {
+        name: "Floor of Literature",
+        path: "img/backgrounds/floorLiterature"
+    },
+    {
+        name: "Floor of Natural Sciences",
+        path: "img/backgrounds/floorNaturalSciences"
+    },
+    {
+        name: "Floor of Languages",
+        path: "img/backgrounds/floorLanguage"
+    },
+    {
+        name: "Floor of Social Sciences",
+        path: "img/backgrounds/floorSocialScience"
+    },
+    {
+        name: "Floor of Philosophy",
+        path: "img/backgrounds/floorPhilosophy"
+    },
+    {
+        name: "Floor of Religion",
+        path: "img/backgrounds/floorReligion"
+    }
+
+]
+
+
+
+
+
+
+
+
+
 
 
 window.addEventListener("load", () => {
