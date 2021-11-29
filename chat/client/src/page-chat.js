@@ -87,10 +87,6 @@ export let backgroundList = [
         path: "img/backgrounds/floorTechonologicalSciences"
     },
     {
-        name: "Floor of General Work",
-        path: "img/backgrounds/floorGeneralWork"
-    },
-    {
         name: "Floor of Art",
         path: "img/backgrounds/floorArt"
     },
@@ -117,14 +113,13 @@ export let backgroundList = [
     {
         name: "Floor of Religion",
         path: "img/backgrounds/floorReligion"
+    },
+    {
+        name: "Floor of General Work",
+        path: "img/backgrounds/floorGeneralWork"
     }
 
 ]
-
-
-
-
-
 
 
 

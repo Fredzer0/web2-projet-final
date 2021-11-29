@@ -8,17 +8,36 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="icon" href="img/favicon.png" type="image/png" />
     </head>
-    <body>        
-        
-        <form action="" method="post" autocomplete="off">
-            <div class="sign-in-input-group">
-                <div id="api-message"></div>
-                <input type="text" name="username" placeholder="Nom d'usager" required>
-                <input type="password" name="password" placeholder="Mot de passe" required>
-                <button>Connexion</button>
+    <body>     
+        <main>
+            <div class="signup">
+                <form action="" method="post" autocomplete="off">
+                    <div class="sign-in-input-group">
+                        <div id="api-message"></div>
+                        <input id="info" type="text" name="username" placeholder="Nom d'usager" required>
+                        <input id ="info" type="password" name="password" placeholder="Mot de passe" required>
+                        <button class="connexion_button">Connexion</button>
+                    </div>
+                </form>
+                <a id ="register" href="register.html">S'enregistrer</a>
             </div>
-        </form>
-        <a href="register.html">S'enregistrer</a>
-
+            <div>
+                <div>
+                    <text name="backgroundchoixtext" id="backgroundchoixtext" > Choisisser votre theme</text>
+                </div>
+                <select name="backgroundchoix">
+                    <option>Floor of History</option>
+                    <option>Floor of Technological Sciences</option>
+                    <option>Floor of Art</option>
+                    <option>Floor of Literature</option>
+                    <option>Floor of Natural Sciences</option>
+                    <option>Floor of Languages</option>
+                    <option>Floor of Social Sciences</option>
+                    <option>Floor of Philosophy</option>
+                    <option>Floor of Religion</option>
+                    <option>Floor of General Work</option>
+                </select>
+            </div>
+        </main>
     </body>
 </html>
