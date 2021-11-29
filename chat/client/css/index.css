@@ -1,6 +1,7 @@
 * {
-	margin:0;
-	padding:0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 html {
@@ -10,13 +11,12 @@ html {
 }
 
 main {
-    display: flex;
-    justify-content: center;
+    display: block;
     padding-top: 5%;
 }
 
 button {
-    padding:10px;
+   
     font-size: 1.3em;
     border-style: line;
     color:black;
@@ -27,31 +27,31 @@ button {
     border-radius: 10px;
     border-color: black;
     background-color: rgba(176, 176, 185, 0.4);
-
     position: relative;
     padding-top: 10%;
     padding-left: 10%;
-    margin-bottom: 10px;
-    display: flexbox;
+    margin-bottom: 20px;
+    display: flex;
     width: 200px;
     height:  200px;
 }
 
-#backgroundchoixtext {
+
+#backgroundChoixText {
     font-size: 30px ;
     color: white;
+    display: flex;
 }
 
 #info {
     display: flex;
-    width: 80%;
-    height: 20%;
-    padding-bottom: 20px;
     margin-bottom: 10px;
 
 }
 
 #register {
+    padding-top: 10%;
+    margin-top: 20px;
     background-color: black;
     border-color: white;
     border-style: solid;
@@ -59,3 +59,4 @@ button {
     color: white;
     text-decoration: none;
 }
+

@@ -1,7 +1,12 @@
 * {
-	margin:0;
-	padding:0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: url('../img/other/MouseCursor1.png'), all-scroll;
+    
 }
+
+
 
 html {
 	background-image:url('../img/backgrounds/background1.png');
@@ -10,12 +15,13 @@ html {
 }
 
 main {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     padding-top: 5%;
 }
 
-button {
+
+#connexion-button {
     padding:10px;
     font-size: 1.3em;
     border-style: line;
@@ -23,29 +29,49 @@ button {
     background-color: beige;
 }
 
+.signin {
+    border-radius: 10px;
+    border-color: black;
+    background-color: rgba(176, 176, 185, 0.4);
+    padding-top: 10%;
+    padding-left: 10%;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 250px;
+    height:  225px;
+}
+
 .signup {
     border-radius: 10px;
     border-color: black;
     background-color: rgba(176, 176, 185, 0.4);
-
-    position: relative;
     padding-top: 10%;
-    padding-left: 10%;
+    padding-left: 15%;
     margin-bottom: 10px;
-    display: flexbox;
-    width: 200px;
-    height:  200px;
+    display: inline-block;
+    width: 250px;
+    height:  400px;
 }
 
-#backgroundchoixtext {
+.sign-in-input-group{
+    padding-top: 0%;
+    padding-bottom: 10%;
+  
+}
+
+#background-choix-text {
     font-size: 30px ;
     color: white;
+}
+
+#background-list {
+    font-size: 20px;
 }
 
 #info {
     display: flex;
     width: 80%;
-    height: 20%;
+    height: 25px;
     padding-bottom: 20px;
     margin-bottom: 10px;
 
@@ -58,4 +84,43 @@ button {
     font-size: 20px ;
     color: white;
     text-decoration: none;
+}
+
+#choixbackground {
+    display: flex;
+    position: relative;
+} 
+
+#zone-fleche {
+    font-size: 20px;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#fleche {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#zone-character {
+    display: flex;
+}
+
+#background-character {
+    opacity: 0.5;
+}
+
+#lumiere {
+    position: absolute;
+    top: auto;
+    left: auto;
+    opacity: 0.2;
+    width: 200px;
+    height: 250px;
+
+}
+
+#selected-character {
+    align-items: center;
 }
