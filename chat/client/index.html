@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Accueil</title>
         <script src="dist/index.js"></script>
+        <script defer src ="src/page-index.js" type="module" ></script>
         <link rel="stylesheet" href="css/global.css">
         <link rel="icon" href="img/favicon.png" type="image/png" />
     </head>
@@ -44,8 +45,8 @@
                         <text> Choisisser votre personnage</text>
                     </div>
                     <div>
-                        <input onclick="flecheGauche" type="image" src="./img/other/fleche_gauche.png" id="fleche">
-                        <input onclick="flecheDroite" type="image" src="./img/other/fleche_droite.png" id="fleche">
+                        <input onclick="flecheGauche()" type="image" src="./img/other/fleche_gauche.png" id="fleche">
+                        <input onclick="flecheDroite()" type="image" src="./img/other/fleche_droite.png" id="fleche">
                     </div>
                 </div>
                 <div id="zone-character">

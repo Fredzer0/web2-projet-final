@@ -1,4 +1,7 @@
-import {signin} from './chat-api';
+
+import {signin} from './chat-api' 
+import { characterList } from "../page-chat"
+
 
 window.addEventListener("load", () => {
     document.querySelector("form").onsubmit = function () {
@@ -6,24 +9,30 @@ window.addEventListener("load", () => {
     }
 });
 
-const flecheGauche = () => {
-    character1 = document.getElementById('background-character1');
-    character2 = document.getElementById('select-character');
-    character3 = document.getElementById('background-character2');
 
+
+
+const flecheGauche = () => {
+
+    var character1 = document.getElementById('background-character1');
+    var character2 = document.getElementById('select-character');
+    var character3 = document.getElementById('background-character2');
+
+    character1.remove();
+    
 
 }
 
 const flecheDroite = () => {
-    character1 = document.getElementById('background-character1');
-    character2 = document.getElementById('select-character');
-    character3 = document.getElementById('background-character2');
+    character1.removeChild();
 
 }
 
 
 //append/remove child
+
 //local storage
+
 stockage = localStorage
 
 var background = stockage.setItem(document.getElementById("background-list"));

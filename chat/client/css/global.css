@@ -105,6 +105,8 @@ main {
 #fleche {
     margin-left: 30px;
     margin-right: 30px;
+    height: 30px;
+    width: 50px;
 }
 
 #zone-character {
@@ -113,13 +115,16 @@ main {
 
 .background-character {
     opacity: 0.5;
+    width: 150px;
+    height: 250px;
+
 }
 
 #lumiere {
     position: absolute;
     top: auto;
     left: auto;
-    opacity: 0.2;
+    opacity: 0.3;
     width: 200px;
     height: 250px;
 
@@ -127,4 +132,9 @@ main {
 
 #selected-character {
     align-items: center;
+    width: 200px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
 }
