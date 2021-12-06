@@ -7,24 +7,105 @@ window.addEventListener("load", () => {
     document.querySelector("form").onsubmit = function () {
         return signin(this);
     }
+
 });
 
+var characterList = ["url(img/sprites/BinahSprite.png)", "url(img/sprites/RolandSprite.png)", "url(img/sprites/MalkuthSprite.png)", "url(img/sprites/YesodSprite.png)", "url(img/sprites/NetzachSprite.png)","url(img/sprites/HodSprite.png)","url(img/sprites/TiperethSprite.png)","url(img/sprites/GeburaSprite.png)","url(img/sprites/ChesedSprite.png)", "url(img/sprites/HokmaSprite.png)"]
 
-
+var Cid = 1;
+var character1 = document.getElementById('background-character1');
+var character2 = document.getElementById('select-character');
+var character3 = document.getElementById('background-character2');
 
 const flecheGauche = () => {
 
-    var character1 = document.getElementById('background-character1');
-    var character2 = document.getElementById('select-character');
-    var character3 = document.getElementById('background-character2');
+    Cid --;
 
-    character1.replaceWith(character2);
+    if (Cid == 0){
+        character1.style.backgroundImage = characterList[characterList.length - 1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[Cid + 1];
+
+    }
+    else if (Cid == -1){
+        Cid = characterList.length - 1;
+        character1.style.backgroundImage = characterList[Cid - 1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[0];
+
+    }
+    else{
+        character1.style.backgroundImage = characterList[Cid - 1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[Cid + 1];
+    }
+
+
+
 
 }
 
 const flecheDroite = () => {
-    character1.removeChild();
+    scrollCharacterRight();
 
+}
+
+var posX = 0;
+
+const scrollCharacterRight = () => {
+    var node = document.getElementById("zone-character");
+    
+       
+    posX -= 1;
+    
+  
+    node.style.marginLeft = posX + "%";
+    if (posX < 25  &&  posX >= 11){
+        setTimeout(scrollCharacterRight, 30);
+        character1.style.opacity -= 0.01
+    }
+    else if (posX < 10){
+        changeCharacterRight();
+        character1.style.opacity = 0.35;
+    }
+
+    
+}
+
+const changeCharacterRight = () => {
+    Cid ++;
+
+
+    if (Cid == characterList.length - 1){
+        character1.style.backgroundImage = characterList[Cid -  1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[0];
+
+    }
+    else if (Cid == characterList.length){
+        Cid = 0;
+        character1.style.backgroundImage = characterList[characterList.length - 1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[Cid + 1];
+
+    }
+    else{
+        character1.style.backgroundImage = characterList[Cid - 1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[Cid + 1];
+    }
+
+}
+
+
+class BackgroundCharacter {
+    constructor(x){
+        this.div = document.createElement("img");
+        this.div.className = "background-character";
+        this.div.style.src = "img/sprites/RolandSprite.png"    //characterList.get("path");
+
+        
+    }
 }
 
 
@@ -34,11 +115,12 @@ const flecheDroite = () => {
 
 stockage = localStorage
 
-var background = stockage.setItem(document.getElementById("background-list"));
-var selectedCharacter = stockage.setItem("");
+//var background = stockage.setItem(document.getElementById("background-list"));
+//var selectedCharacter = idC;
 
 
-let characterList = [
+/*
+var cha = [
     {  
         id: id++,
         name: "Roland",
@@ -101,3 +183,5 @@ let characterList = [
     },
 
 ]
+
+*/

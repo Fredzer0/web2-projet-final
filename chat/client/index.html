@@ -39,35 +39,29 @@
                     <option>Floor of General Work</option>
                 </select>
             </div>
-            <div>
-                <div id="zone-fleche">
-                    <div>
-                        <text> Choisisser votre personnage</text>
-                    </div>
-                    <div>
-                        <input onclick="flecheGauche()" type="image" src="./img/other/fleche_gauche.png" id="fleche">
-                        <input onclick="flecheDroite()" type="image" src="./img/other/fleche_droite.png" id="fleche">
-                    </div>
+            <div class="zone-fleche">
+                <div>
+                    <text> Choisisser votre personnage</text>
                 </div>
-                <div id="zone-character">
-                    <div id="background-character1" class="background-character">
-                        <img  src="./img/sprites/BinahSprite.png" alt="">
-                    </div>
-                    <div id="select-character">
-                        <img id ="lumiere" src="./img/other/lumière.png" alt="">
-                        <img  src="./img/sprites/RolandSprite.png" alt="">
-
-                    </div>
-                    <div id="background-character2" class="background-character">
-                        <img src="./img/sprites/MalkuthSprite.png" alt="">
-                    </div>
-
+                <div>
+                    <input onclick="flecheGauche()" type="image" src="./img/other/fleche_gauche.png" id="fleche">
+                    <input onclick="flecheDroite()" type="image" src="./img/other/fleche_droite.png" id="fleche">
+                </div>
+            </div>
+            <div id ="zone-character" class="zone-character">
+                <div id="background-character1" class="background-character" style="background-image: url(img/sprites/BinahSprite.png)">
                     
                 </div>
-                <div id="zone-pedestal">
-                    <img src="./img/other/pedestal.png" alt="">
-                </div>
+                <div id="select-character" class="selected-character" style="background-image: url(./img/sprites/RolandSprite.png)">
 
+                </div>
+                <div id="background-character2" class="background-character" style="background-image: url(./img/sprites/MalkuthSprite.png)">
+                </div>
+                    
+                
+            </div>
+            <div class="zone-pedestal">
+                <img src="./img/other/pedestal.png" alt="">
             </div>
         </main>
     </body>
