@@ -126,12 +126,12 @@ main {
 }
 
 #background-character1 {
-    background-image: url("img/sprites/BinahSprite.png") ;
+    background-image: url("../img/sprites/BinahSprite.png") ;
 }
 
 #background-character2 {
     opacity: 0.35;
-    background-image: url("./img/sprites/MalkuthSprite.png");
+    background-image: url("../img/sprites/MalkuthSprite.png");
 }
 
 .selected-character {
@@ -142,12 +142,12 @@ main {
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 10px;
-    background-image: url("./img/sprites/RolandSprite.png");
+    background-image: url("../img/sprites/RolandSprite.png");
     background-repeat: no-repeat;
     background-position-y: bottom;
 }
 
 .zone-pedestal {
     position: relative;
-
 }
+

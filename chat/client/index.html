@@ -4,9 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Accueil</title>
-        <script src="dist/index.js" ></script>
-        <script defer src ="src/page-index.js" ></script>
-        <link rel="stylesheet" href="css/global.css">
+        <script defer src="dist/index.js" ></script>
+        <link rel="stylesheet" defer href="css/global.css">
         <link rel="icon" href="img/favicon.png" type="image/png" />
     </head>
     <body>     
@@ -27,16 +26,16 @@
                     <text name="backgroundChoixText" id="background-choix-text" > Choisisser votre theme</text>
                 </div>
                 <select id="background-list" name="backgroundlist">
-                    <option>Floor of History</option>
-                    <option>Floor of Technological Sciences</option>
-                    <option>Floor of Art</option>
-                    <option>Floor of Literature</option>
-                    <option>Floor of Natural Sciences</option>
-                    <option>Floor of Languages</option>
-                    <option>Floor of Social Sciences</option>
-                    <option>Floor of Philosophy</option>
-                    <option>Floor of Religion</option>
-                    <option>Floor of General Work</option>
+                    <option value = "floorHistory">Floor of History</option>
+                    <option value = "floorTechnologicalSciences">Floor of Technological Sciences</option>
+                    <option value = "floorArt">Floor of Art</option>
+                    <option value = "floorLiterature">Floor of Literature</option>
+                    <option value = "floorNaturalSciences" >Floor of Natural Sciences</option>
+                    <option value="floorLanguages">Floor of Languages</option>
+                    <option value="floorSocialSciences">Floor of Social Sciences</option>
+                    <option value="floorPhilosophy">Floor of Philosophy</option>
+                    <option value="floorReligion">Floor of Religion</option>
+                    <option value="floorGeneralWork">Floor of General Work</option>
                 </select>
             </div>
             <div class="zone-fleche">
@@ -49,15 +48,9 @@
                 </div>
             </div>
             <div id ="zone-character" class="zone-character">
-                <div id="background-character1" class="background-character" >
-                    
-                </div>
-                <div id="select-character" class="selected-character">
-
-                </div>
-                <div id="background-character2" class="background-character" >
-                </div>
-                    
+                <div id="background-character1" class="background-character"></div>
+                <div id="select-character" class="selected-character"></div>
+                <div id="background-character2" class="background-character"></div>
                 
             </div>
             <div class="zone-pedestal">

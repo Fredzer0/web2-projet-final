@@ -2,63 +2,79 @@ import {registerCallbacks, sendMessage, signout, chatMessageLoop} from './chat-a
 import Vue from 'vue'
 import App from './App.vue'
 
+
 new Vue({
 	el: '#main-container',
 	components: { App },
 	template: '<App/>'
 })
 
-
-
-export let backgroundList = [
-
-    {
-        name: "Floor of History",
-        path: "img/backgrounds/floorHistory.png"
+export let characterList = [
+    {  
+        id: id++,
+        name: "Roland",
+        path: "img/sprites/RolandSprite.png",
+        cardPath: "img/cards/rolandCard.png",
     },
-    {
-        name: "Floor of Technological Sciences",
-        path: "img/backgrounds/floorTechonologicalSciences"
+    {   
+        id: id++,
+        name: "Malkuth",
+        path: "img/sprites/MalkuthSprite.png",
+        cardPath: "img/cards/malkuthCard.png",
     },
-    {
-        name: "Floor of Art",
-        path: "img/backgrounds/floorArt"
+    {   
+        id: id++,
+        name: "Yesod",
+        path: "img/sprites/YesodSprite.png",
+        cardPath: "img/cards/yesodCard.png",
     },
-    {
-        name: "Floor of Literature",
-        path: "img/backgrounds/floorLiterature"
+    {   
+        id: id++,
+        name: "Netzach",
+        path: "img/sprites/NetzachSprite.png",
+        cardPath: "img/cards/netzachCard.png",
     },
-    {
-        name: "Floor of Natural Sciences",
-        path: "img/backgrounds/floorNaturalSciences"
+    {   
+        id: id++,
+        name: "Hod",
+        path: "img/sprites/HodSprite.png",
+        cardPath: "img/cards/hodCard.png",
     },
-    {
-        name: "Floor of Languages",
-        path: "img/backgrounds/floorLanguage"
+    {   
+        id: id++,
+        name: "Tipereth",
+        path: "img/sprites/TiperethSprite.png",
+        cardPath: "img/cards/tiperethCard.png",
     },
-    {
-        name: "Floor of Social Sciences",
-        path: "img/backgrounds/floorSocialScience"
+    {   
+        id: id++,
+        name: "Gebura",
+        path: "img/sprites/GeburaSprite.png",
+        cardPath: "img/cards/geburaCard.png",
     },
-    {
-        name: "Floor of Philosophy",
-        path: "img/backgrounds/floorPhilosophy"
+    {   
+        id: id++,
+        name: "Chesed",
+        path: "img/sprites/ChesedSprite.png",
+        cardPath: "img/cards/chesedCard.png",
     },
-    {
-        name: "Floor of Religion",
-        path: "img/backgrounds/floorReligion"
+    {   
+        id: id++,
+        name: "Binah",
+        path: "img/sprites/BinahSprite.png",
+        cardPath: "img/cards/binahCard.png",
     },
-    {
-        name: "Floor of General Work",
-        path: "img/backgrounds/floorGeneralWork"
-    }
+    {   
+        id: id++,
+        name: "Hokma",
+        path: "img/sprites/HokmaSprite.png",
+        cardPath: "img/cards/hokmaCard.png",
+    },
 
 ]
 
-
-
-
-
+export let background = localStorage.getItem("background");
+export let mainCharacter = localStorage.getItem("character");
 
 window.addEventListener("load", () => {
     document.querySelector("textarea").onkeyup = function (evt) {

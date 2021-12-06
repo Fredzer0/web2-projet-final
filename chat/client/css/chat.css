@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: url('../img/other/MouseCursor1.png'), auto;
+    
+}
+
+#map {
+    display: flexbox;
+    background-position:top right;
+	background-repeat:no-repeat;
+}
+
+
+.chat{
+    height: 50%;
+    width: 50%;
+}
+
+.users {
+    height: 50%;
+    width: 20%;
+}
+
+.input-chat{
+    height: 10%;
+    width: 70%;
+}
+
+.character{
+    position: absolute;
+    max-width: 30px;
+    max-height: 40px;
+}
