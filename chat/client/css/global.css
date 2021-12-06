@@ -112,26 +112,37 @@ main {
     display: flex;
     position: relative;
     justify-content: center;
+    margin-right: "1px";
+    margin-left: "1px";
 }
 
 .background-character {
     opacity: 0.35;
     width: 200px;
     height: 275px;
-    background-image: "";
     background-repeat: no-repeat;
     background-position-y: bottom;
     
 }
 
+#background-character1 {
+    background-image: url("img/sprites/BinahSprite.png") ;
+}
+
+#background-character2 {
+    opacity: 0.35;
+    background-image: url("./img/sprites/MalkuthSprite.png");
+}
+
 .selected-character {
+    opacity: 1;
     align-items: center;
     width: 200px;
     height: 275px;
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 10px;
-    background-image: "";
+    background-image: url("./img/sprites/RolandSprite.png");
     background-repeat: no-repeat;
     background-position-y: bottom;
 }

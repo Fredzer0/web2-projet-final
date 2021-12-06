@@ -16,61 +16,60 @@ var Cid = 1;
 var character1 = document.getElementById('background-character1');
 var character2 = document.getElementById('select-character');
 var character3 = document.getElementById('background-character2');
+var node = document.getElementById("zone-character");
+var posX = node.style.marginRight;
+var loop = 0;
 
 const flecheGauche = () => {
 
-    Cid --;
-
-    if (Cid == 0){
-        character1.style.backgroundImage = characterList[characterList.length - 1];
-        character2.style.backgroundImage = characterList[Cid];
-        character3.style.backgroundImage = characterList[Cid + 1];
-
-    }
-    else if (Cid == -1){
-        Cid = characterList.length - 1;
-        character1.style.backgroundImage = characterList[Cid - 1];
-        character2.style.backgroundImage = characterList[Cid];
-        character3.style.backgroundImage = characterList[0];
-
+    posX += 20;
+    loop++;
+  
+    node.style.marginLeft = posX + "px";
+    if (loop <= 20 ){
+        character1.style.opacity = parseFloat(character1.style.opacity) + 0.03;
+        character2.style.opacity = parseFloat(character2.style.opacity) - 0.03;
+        character3.style.opacity = parseFloat(character3.style.opacity) - 0.05;
+        setTimeout(flecheGauche, 30);
+ 
     }
     else{
-        character1.style.backgroundImage = characterList[Cid - 1];
-        character2.style.backgroundImage = characterList[Cid];
-        character3.style.backgroundImage = characterList[Cid + 1];
+        changeCharacterLeft();
+        node.style.marginLeft = 0 + "px";
+        character1.style.opacity = 0.35;
+        character2.style.opacity = 1;
+        character3.style.opacity = 0.35;
+        loop = 0;
+        posX = 0;
     }
-
-
-
 
 }
 
 const flecheDroite = () => {
-    scrollCharacterRight();
 
-}
-
-var posX = 0;
-
-const scrollCharacterRight = () => {
-    var node = document.getElementById("zone-character");
-    
-       
-    posX -= 1;
-    
+   
+    posX += 20;
+    loop++;
   
-    node.style.marginLeft = posX + "%";
-    if (posX < 25  &&  posX >= 11){
-        setTimeout(scrollCharacterRight, 30);
-        character1.style.opacity -= 0.01
+    node.style.marginRight = posX + "px";
+    if (loop <= 20 ){
+        character1.style.opacity = parseFloat(character1.style.opacity) - 0.05;
+        character2.style.opacity = parseFloat(character2.style.opacity) - 0.03;
+        character3.style.opacity = parseFloat(character3.style.opacity) + 0.03;
+        setTimeout(flecheDroite, 30);
+ 
     }
-    else if (posX < 10){
+    else{
         changeCharacterRight();
+        node.style.marginRight = 0 + "px";
         character1.style.opacity = 0.35;
+        character2.style.opacity = 1;
+        character3.style.opacity = 0.35;
+        loop = 0;
+        posX = 0;
     }
-
-    
 }
+
 
 const changeCharacterRight = () => {
     Cid ++;
@@ -97,27 +96,40 @@ const changeCharacterRight = () => {
 
 }
 
+const changeCharacterLeft = () => {
+    Cid --;
 
-class BackgroundCharacter {
-    constructor(x){
-        this.div = document.createElement("img");
-        this.div.className = "background-character";
-        this.div.style.src = "img/sprites/RolandSprite.png"    //characterList.get("path");
+    if (Cid == 0){
+        character1.style.backgroundImage = characterList[characterList.length - 1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[Cid + 1];
 
-        
     }
-}
+    else if (Cid == -1){
+        Cid = characterList.length - 1;
+        character1.style.backgroundImage = characterList[Cid - 1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[0];
 
+    }
+    else{
+        character1.style.backgroundImage = characterList[Cid - 1];
+        character2.style.backgroundImage = characterList[Cid];
+        character3.style.backgroundImage = characterList[Cid + 1];
+    }
+
+
+
+}
 
 //append/remove child
 
 //local storage
 
-stockage = localStorage
+stockage = window.localStorage;
 
-//var background = stockage.setItem(document.getElementById("background-list"));
-//var selectedCharacter = idC;
-
+stockage.setItem("character", Cid);
+stockage.setItem("background", )
 
 /*
 var cha = [
