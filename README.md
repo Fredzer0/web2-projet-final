@@ -15,6 +15,7 @@ il n'y a pas de easter egg, les sons prends trop de place en mémoire fichier
 
 
 
+github : https://github.com/Fredzer0/web2-projet-final
 
 source sprites: library of ruina @copyright Project moon
 https://drive.google.com/drive/folders/12ifYsKtsT7SdkjCiJOGaH40aJ-0uJ4X9

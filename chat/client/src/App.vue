@@ -1,21 +1,23 @@
 <template>
-	<div id = "map" :style ="{backgroundImage:'url(../img/backgrounds/' + background + '.png)'}">
-		 <div class = "chat" id="chat" v-for="message in messageList" v-bind:key="message.messageList">
-			<div class="message"> message.text </div>
+	<div id = "map" :style ="{backgroundImage:'url(../img/backgrounds/' + backGround + '.png)'}">
+		<div id = "text-chat">
+			<div type ="text" class = "chat" id="chat" v-for="message in messageList" v-bind:key="message.messageList">
+				<div class="chat">{{message.message}}</div>
 
-		</div>
-		<div class=" users" v-for="user in userList" v-bind:key="user.userlist" >
-			<div class="user">{{user.name}}  </div>
+			</div>
+			<div class=" users" v-for="user in userList" v-bind:key="user.userlist" >
+				<div class="user">{{user}}  </div>
 
+			</div>
 		</div>
 		<div class="input-chat">
-			<textarea type="text" autofocus id="input-field" cols="3" rows="2"></textarea>
+			<textarea type="text" autofocus id="input-field"></textarea>
 		</div>
-		<div v-for="character in characters"
-			v-bind:key="character.characters" 
+		<div v-for="character in charaList"
+			v-bind:key="character.charaList" 
 			:src="character.path" 
-		class="character"
-		:style="{left:character.posX, top: character.posY}"
+			class="character"
+			:style="{left:character.posX, top: character.posY}"
 		>
 
 		</div>
@@ -25,41 +27,36 @@
 </template>
 
 <script>
-import {characterList} from './page-chat.js'
-import {background} from './page-chat.js'
-import {mainCharacter} from './page-chat.js'
-export default {
-	name: "App",
-	data() {
-		return {
-            background: background,
-            characters: [],
-			characterlist : characterList,
-			mainCharacter : mainCharacter,
-			userList: [],
-			messageList:[]
-     	};
-  	},
-  	methods: {
-		addCharacter() {
-		this.characters.push({
-			path: this.path,
-			posX: this.posX = Math.random()*100,
-			posY: this.posY = Math.random()*100
-			})
+	import {characterList} from './page-chat.js'
+	import {background} from './page-chat.js'
+	import {mainCharacter} from './page-chat.js'
+	import {nouveauMessage} from './page-chat.js'
+	import {membre} from './page-chat.js'
+	export default {
+		name: "App",
+		data() {
+			return {
+				backGround: background,
+				charaList : characterList,
+				mainCharacter : mainCharacter,
+				userList : membre,
+				messagelist: []
+			};
 		},
-		addUser(){
-			this.userList.push({
-				name: this.name
-
-			})
+		methods: {
+			addMessage(text){
+				this.messagelist.push({
+					message: nouveauMessage
+				})
+				this.nouveauMessage = "";	
+			},
+			attack(victime){
+				this.character(indexOf(charaList), int(mainCharacter));
+				this.character.top = victime.top;
+				this.character.left = victime.left + 10;
+				//slap 
+			}
+			
 		},
-		addMessage(text){
-			this.messageList.push({
-				text: text
-			})
-		}
-    	
-  	},
-};
+	};
 </script>

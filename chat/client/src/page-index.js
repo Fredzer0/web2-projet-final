@@ -8,22 +8,26 @@ window.addEventListener("load", () => {
 
 });
 
+//liste des personnages
 var characterList = ["url(img/sprites/BinahSprite.png)", "url(img/sprites/RolandSprite.png)", "url(img/sprites/MalkuthSprite.png)", "url(img/sprites/YesodSprite.png)", "url(img/sprites/NetzachSprite.png)","url(img/sprites/HodSprite.png)","url(img/sprites/TiperethSprite.png)","url(img/sprites/GeburaSprite.png)","url(img/sprites/ChesedSprite.png)", "url(img/sprites/HokmaSprite.png)"]
+//var music = new Audio("./music/Theme02.wav") si musique est permi, prend trop d'espace fichier
+//music.play();
 
-var Cid = 1;
-var character1 = document.getElementById('background-character1');
-var character2 = document.getElementById('select-character');
-var character3 = document.getElementById('background-character2');
-var node = document.getElementById("zone-character");
+var Cid = 1; //ID du perso choisi
+var character1 = document.getElementById('background-character1'); //personnage précédent
+var character2 = document.getElementById('select-character');  //personnage choisi
+var character3 = document.getElementById('background-character2'); //personnage suivant
+var node = document.getElementById("zone-character"); 
 var posX = node.style.marginRight;
 var loop = 0;
 
-const flecheGauche = () => {
+
+const flecheGauche = () => { //fonction du "bouton" de la fleche gauche
 
     posX += 21;
     loop++;
   
-    node.style.marginLeft = posX + "px";
+    node.style.marginLeft = posX + "px";  //fait bouger la "roue" de personnage 
     if (loop <= 20 ){
         character1.style.opacity = parseFloat(character1.style.opacity) + 0.03;
         character2.style.opacity = parseFloat(character2.style.opacity) - 0.03;
@@ -32,7 +36,7 @@ const flecheGauche = () => {
  
     }
     else{
-        changeCharacterLeft();
+        changeCharacterLeft(); //mets à jour quel sont les personnages
         node.style.marginLeft = 0 + "px";
         character1.style.opacity = 0.35;
         character2.style.opacity = 1;
@@ -40,10 +44,9 @@ const flecheGauche = () => {
         loop = 0;
         posX = 0;
     }
-
 }
 
-const flecheDroite = () => {
+const flecheDroite = () => { //version fleche droite
 
    
     posX += 20;
@@ -73,14 +76,14 @@ const changeCharacterRight = () => {
     Cid ++;
 
 
-    if (Cid == characterList.length - 1){
+    if (Cid == characterList.length - 1){ //limite droite du tableau
         character1.style.backgroundImage = characterList[Cid -  1];
         character2.style.backgroundImage = characterList[Cid];
         character3.style.backgroundImage = characterList[0];
 
     }
     else if (Cid == characterList.length){
-        Cid = 0;
+        Cid = 0; //fait looper la liste
         character1.style.backgroundImage = characterList[characterList.length - 1];
         character2.style.backgroundImage = characterList[Cid];
         character3.style.backgroundImage = characterList[Cid + 1];
@@ -97,14 +100,14 @@ const changeCharacterRight = () => {
 const changeCharacterLeft = () => {
     Cid --;
 
-    if (Cid == 0){
+    if (Cid == 0){ //limite gauche du tableau
         character1.style.backgroundImage = characterList[characterList.length - 1];
         character2.style.backgroundImage = characterList[Cid];
         character3.style.backgroundImage = characterList[Cid + 1];
 
     }
     else if (Cid == -1){
-        Cid = characterList.length - 1;
+        Cid = characterList.length - 1; //fait looper la liste
         character1.style.backgroundImage = characterList[Cid - 1];
         character2.style.backgroundImage = characterList[Cid];
         character3.style.backgroundImage = characterList[0];
@@ -120,10 +123,8 @@ const changeCharacterLeft = () => {
 
 }
 
-/*
-var stockage = window.localStorage;
+var stockage = window.localStorage; 
 
-stockage.setItem("character", Cid);
-stockage.setItem("background", document.getElementById("background-list"))
+stockage.setItem("character", Cid); //envoie le personnage choisi
+stockage.setItem("background", document.getElementById("background-list")) //envoi le theme choisi
 
-*/

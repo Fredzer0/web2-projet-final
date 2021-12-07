@@ -7,25 +7,27 @@
 }
 
 #map {
-    display: flexbox;
+    display: flex;
     background-position:top right;
 	background-repeat:no-repeat;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
 
 .chat{
-    height: 50%;
-    width: 50%;
+    height: 500px;
+    width: 500px;
 }
 
 .users {
-    height: 50%;
-    width: 20%;
+    height: 500px;
+    width: 200px;
 }
 
 .input-chat{
-    height: 10%;
-    width: 70%;
+    height: 100px;
+    width: 700px;
 }
 
 .character{
