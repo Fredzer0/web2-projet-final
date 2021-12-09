@@ -9,9 +9,9 @@ Dans la page d'acceuil (sign in/index) on a le selecteur de personnage comme ani
 dans la page register on a simplement des petit carées avec canvas pour faire des particules de lumière pour de l'ambiance
 
 
-enfin dans le chat on a le chatbox et en dessous les personnages qui apparaits et si on clique sur un d'entre eux sauf le notre on l'attaque (vue marchais mal chez moi donc je n'ai très plus tester cette partie)
+enfin dans le chat on a le chatbox et en dessous les personnages qui apparaits et si on clique sur un d'entre eux sauf le notre on l'attaque (incomplet) (vue marchais mal chez moi donc je n'ai très plus tester cette partie)
 
-il n'y a pas de easter egg, les sons prends trop de place en mémoire fichier
+il n'y a pas de easter egg
 
 
 
